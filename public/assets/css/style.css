@@ -139,4 +139,10 @@ body {
   textarea {
     resize: none;
   }
+
+  .img-circle {
+      
+    border-radius:50% ;
+    
+  }
   

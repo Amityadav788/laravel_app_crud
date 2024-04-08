@@ -21,10 +21,10 @@
 @endif
 
 <div class="container">
-    <h2>Add contact</h2>
+    <h2>Edit</h2>
 
-    <form  method="POST" action="{{route('contact.update')}}">
-  <div class="form-row">
+    <form  method="POST" action="{{route('contact.update')}}" enctype="multipart/form-data">
+  <div class="form-group">
     <div class="form-group col-md-6">
       <label for="name">Name</label>
       <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" value="{{$data->name}}">
@@ -49,6 +49,14 @@
 @enderror
     </div>
     <div class="form-group col-md-6">
+      <label for="image">Image</label>
+      <input type="file" class="form-control" id="image" placeholder="Upload image" name="image" value="{{$data->image}}">
+      <img class="img-circle" width="50" height="50" src="{{ ('/storage/images/'. $data->image)}}">
+      @error('image')
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror
+    </div>
+    <div class="form-group col-md-6">
       <label for="address">Address</label>
       <input type="text" class="form-control" id="address" placeholder="Enter address" name="address" value="{{$data->address}}">
       @error('address')
@@ -64,7 +72,7 @@
       </label>
     </div>
   </div>
-  <button type="submit" class="btn btn-success">Submit</button>
+  <button type="submit" class="btn btn-success">Edit</button>
 </form>
 </div>
 

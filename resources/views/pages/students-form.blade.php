@@ -12,7 +12,7 @@
 @endif
     <p></p>
 
-<form method="POST" action="{{ route('students.add') }}">
+<form method="POST" action="{{ route('students.add') }}" enctype="multipart/form-data">
 <div class="form-group">
     <label for="name">Name</label>
     <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}"  placeholder="Enter name">
@@ -53,6 +53,13 @@
     <label for="m_name">Mother name</label>
     <input type="text" class="form-control" id="m_name" name="m_name" value="{{old('m_name')}}"  placeholder="Enter name">
     @error('m_name')
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror
+  </div>
+  <div class="form-group">
+    <label for="image">Image</label>
+    <input type="file" class="form-control" id="image" name="image" value="{{old('image')}}"  placeholder="Upload image">
+    @error('image')
     <div class="alert alert-danger">{{ $message }}</div>
 @enderror
   </div>

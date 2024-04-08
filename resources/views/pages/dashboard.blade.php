@@ -21,7 +21,7 @@
 
 <div class="container">
     <h2>Add contact</h2>
-    <form  method="POST" action="{{route('users.home')}}">
+    <form  method="POST" action="{{route('users.home')}}" enctype="multipart/form-data">
   <div class="form-group">
     <div class="form-group col-md-6">
       <label for="name">Name</label>
@@ -43,6 +43,13 @@
       <label for="phone">Phone</label>
       <input type="number" class="form-control" id="phone" placeholder="Enter phone" name="phone" value="{{old('phone')}}">
       @error('phone')
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror
+    </div>
+    <div class="form-group col-md-6">
+      <label for="image">Image</label>
+      <input type="file" class="form-control" id="image" placeholder="Upload image" name="image" value="{{old('image')}}">
+      @error('image')
     <div class="alert alert-danger">{{ $message }}</div>
 @enderror
     </div>

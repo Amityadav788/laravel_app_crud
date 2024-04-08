@@ -28,16 +28,24 @@ class StudentsController extends Controller
             'phone' =>'required',
             'f_name' =>'required',
             'm_name' =>'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
             'b_group' =>'required',
 
         ]);
 
+        // dd($request->all());
+        $ext =$request->image->extension();
+        $unique_name =time().'.'.$ext;
+        // dd($unique_name);
+        
         $name =$request->name;
         $email =$request->email;
         $password =$request->password;
         $phone =$request->phone;
         $f_name =$request->f_name;
         $m_name =$request->m_name;
+        $image =$request->image->storeAS('public/images',$unique_name);
+        // dd($image);
         $b_grp =$request->b_group;
 
        $student = new Student();
@@ -48,6 +56,7 @@ class StudentsController extends Controller
        $student->phone = $phone;
        $student->f_name = $f_name;
        $student->m_name = $m_name;
+       $student->image =$unique_name;
        $student->b_group = $b_grp;
 
        $id = $student->save();
