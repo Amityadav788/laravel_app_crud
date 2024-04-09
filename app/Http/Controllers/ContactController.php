@@ -111,7 +111,7 @@ class ContactController extends Controller
        if($id){
 
         $contact = Contact::find($id);
-        //dd($contact);
+        // dd($contact);
 
        }
 
@@ -136,6 +136,10 @@ class ContactController extends Controller
         $ext =$request->image->extension();
         $unique_name =time().'.'.$ext;
         $image =$request->image->storeAs('public/images', $unique_name);
+        $img =$request->file('image');
+        
+        // dd($img);
+        // dd($image);
 
         $contact = Contact::find($id);
         //dd($contact);
@@ -145,7 +149,8 @@ class ContactController extends Controller
             $contact->name =$request->input('name');
             $contact->email =$request->input('email');
             $contact->phone =$request->input('phone');
-            $contact->image =$unique_name;
+            $contact->image =$request->input('image',$img);
+            // dd($contact->image);
             $contact->address =$request->input('address');
 
             $contact ->save();

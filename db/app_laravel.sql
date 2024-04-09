@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2024 at 04:56 PM
+-- Generation Time: Apr 09, 2024 at 06:06 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -47,9 +47,10 @@ CREATE TABLE `app_crud` (
 
 CREATE TABLE `contacts` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -60,26 +61,22 @@ CREATE TABLE `contacts` (
 -- Dumping data for table `contacts`
 --
 
-INSERT INTO `contacts` (`id`, `name`, `email`, `phone`, `address`, `created_at`, `updated_at`, `author_id`) VALUES
-(1, 'Ankit Yadav', 'officialankit1998@gmail.com', '09140088783', 'New Hargobind Nagar, Backside Hero steel', '2024-04-04 02:49:02', '2024-04-04 02:49:02', 20),
-(2, 'vikas kumar', 'vk@gmail.com', '980898778', 'Chak sethwal, Rani ki sarai', '2024-04-04 02:49:40', '2024-04-04 02:49:40', 20),
-(3, 'haleloea', 'yu@gmail.com', '48787879548', 'New Hargobind Nagar, Backside Hero steel', '2024-04-04 02:51:03', '2024-04-04 04:18:38', 21),
-(8, 'nikolas', 'niik@gmail.com', '879877867', 'mdtv', '2024-04-04 04:19:32', '2024-04-04 04:19:32', 21),
-(9, 'kjdfjf', 'legends@inlnww', '897656687879', 'model town', '2024-04-04 04:20:41', '2024-04-04 04:20:41', 21),
-(10, 'Amit Yadav', 'officialankit1998@gmail.com', '9140088783', 'Chak sethwal, Rani ki sarai', '2024-04-04 04:47:40', '2024-04-04 04:47:40', 21),
-(11, 'Ankit Yadav', 'ankityadavdc@gmail.com', '09140088783', 'Maya nagar colony,Kasabad, Rani ki sarai', '2024-04-04 05:32:26', '2024-04-04 05:32:26', 20),
-(14, 'khushi', 'ks@gmail.coms', '809989889809', 'moti nagar', '2024-04-04 09:46:40', '2024-04-04 09:46:40', 20),
-(15, 'tarun', 'tm@gmail.com', '8978767789', 'HARGOBIND NAGAR', '2024-04-04 10:12:27', '2024-04-04 10:12:27', 20),
-(16, 'dhiru', 'da@gmail.com', '87989787987', 'mumbai', '2024-04-04 22:08:51', '2024-04-04 22:08:51', 23),
-(17, 'mintu', 'my@gmail.com', '908898989', 'delhi', '2024-04-04 22:19:38', '2024-04-04 22:19:38', 23),
-(18, 'chikku', 'ck@gmail.com', '98898987879', 'model tower', '2024-04-04 22:35:49', '2024-04-04 22:35:49', 20),
-(19, 'Ankit Yadav', 'ankityadavdc@gmail.com', '09140088783', 'Maya nagar colony,Kasabad, Rani ki sarai', '2024-04-04 22:59:34', '2024-04-04 22:59:34', 20),
-(20, 'kapu', 'ks@gmail.com', '879879879879', 'model town', '2024-04-04 23:01:49', '2024-04-04 23:01:49', 20),
-(21, 'giaan', 'gc@gmail.com', '9889897877', 'model town', '2024-04-04 23:18:10', '2024-04-04 23:18:10', 20),
-(22, 'Amit Yadav', 'officialankit1998@gmail.com', '9140088783', 'Chak sethwal, Rani ki sarai', '2024-04-04 23:44:32', '2024-04-04 23:44:32', 20),
-(24, 'pk', 'pk@gmail.com', '980980569', 'HARGOBIND NAGAR', '2024-04-04 23:46:42', '2024-04-04 23:46:42', 20),
-(25, 'kapil', 'ks@gmail.com', '98787987789', 'HARGOBIND NAGAR', '2024-04-05 00:07:26', '2024-04-05 00:07:26', 20),
-(34, 'Amit Yadav', 'officialankit1998@gmail.com', '9140088783', 'Chak sethwal, Rani ki sarai', '2024-04-05 09:51:12', '2024-04-05 09:51:12', 23);
+INSERT INTO `contacts` (`id`, `name`, `email`, `phone`, `image`, `address`, `created_at`, `updated_at`, `author_id`) VALUES
+(1, 'Prof. Dakota McClure', 'kiera.hintz@sporer.org', '+1-434-507-4157', '0', '2578 Orland Mountain\nErlingshire, UT 37846', '2024-04-08 04:50:13', '2024-04-08 04:50:13', 29),
+(2, 'Scotty Labadie PhD', 'vance46@renner.net', '657.468.5649', '0', '207 Littel Walk\nPort Domenicatown, VT 60661-8429', '2024-04-08 04:50:13', '2024-04-08 04:50:13', 18),
+(3, 'Kaia Lynch', 'kareem09@gmail.com', '+1.386.393.2254', 'b6878447336960b0373904d12a707339.png', '20598 Becker Landing Suite 979\nHartmannmouth, MN 11991', '2024-04-08 04:50:13', '2024-04-08 04:50:13', 19),
+(4, 'Sibyl Aufderhar DVM', 'bwuckert@wuckert.info', '89787687', '1712573769.jpg', '851 Doyle Parkways Apt. 619Lake Justenstad, KS 63930-9730', '2024-04-08 04:50:13', '2024-04-08 05:26:09', 23),
+(5, 'Emery Lubowitz', 'jlang@wisoky.biz', '1-760-400-0707', '0', '2388 Joan Vista Suite 008\nAdamsbury, NM 90518', '2024-04-08 04:50:13', '2024-04-08 04:50:13', 21),
+(6, 'Bobbie Bayer', 'keenan.ferry@roob.info', '+1.949.692.2798', '0', '49581 Kuhn Drives Suite 993\nSouth Lela, RI 01002', '2024-04-08 04:50:13', '2024-04-08 04:50:13', 26),
+(7, 'Eliza O\'Conner', 'pearl95@hotmail.com', '1-220-414-5453', 'db420a7982a8e14f599f577ec7ebcf18.png', '641 Laury Point\nMillerside, MD 68760-8218', '2024-04-08 04:50:13', '2024-04-08 04:50:13', 20),
+(8, 'Cleta Hodkiewicz', 'favian.schoen@kulas.com', '+1.678.678.2135', 'ad2f9f31f47d7250bda0cf59e9282ebd.png', '33129 Yadira Green Apt. 876\nNorth Cornellchester, MN 76036', '2024-04-08 04:50:13', '2024-04-08 04:50:13', 19),
+(9, 'Kamille Johnson', 'mia.rau@beahan.com', '480-430-6596', '7a558ad375b24d65c668cd4975ef300e.png', '2237 Stephan Lodge Apt. 826\nBechtelarmouth, ME 08433-4378', '2024-04-08 04:50:13', '2024-04-08 04:50:13', 24),
+(10, 'Casimer Hammes', 'gottlieb.darius@cummings.org', '(930) 874-9404', '0338e5df3f7593ba78efede98b45300a.png', '23564 Erwin Village Suite 391\nEast Janessa, MD 71159-3807', '2024-04-08 04:50:13', '2024-04-08 04:50:13', 18),
+(11, 'Ankit Yadav', 'ankityadavdc@gmail.com', '09140088783', '1712595399.jpg', 'Maya nagar colony,Kasabad, Rani ki sarai', '2024-04-08 11:26:39', '2024-04-08 11:26:39', 20),
+(12, 'nirmal', 'nimmu@gmail.com', '0998787098', '1712595487.jpg', 'mohali', '2024-04-08 11:28:07', '2024-04-08 11:28:07', 20),
+(13, 'rinku', 'rk@gmail.com', '9868767890', '1712595518.jpg', 'mizoram', '2024-04-08 11:28:38', '2024-04-08 11:28:38', 20),
+(14, 'kkkk', 'king@gmail.com', '985897345', 'C:\\Users\\HP\\AppData\\Local\\Temp\\phpB61A.tmp', 'ndffjebf', '2024-04-08 11:29:14', '2024-04-09 00:35:13', 20),
+(15, 'Ankit Yadav', 'ankityadavdc@gmail.com', '09140088783', '1712639380.jpg', 'Maya nagar colony,Kasabad, Rani ki sarai', '2024-04-08 23:38:28', '2024-04-08 23:39:40', 20);
 
 -- --------------------------------------------------------
 
@@ -126,7 +123,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (10, '2024_04_03_101355_alter_students_table', 7),
 (11, '2024_04_03_181313_create_contact_table', 8),
 (12, '2024_04_03_182155_alter_contact_table', 9),
-(13, '2024_04_04_073341_alter_contact_table', 9);
+(13, '2024_04_04_073341_alter_contact_table', 9),
+(14, '2024_04_08_080257_alter_students_table', 10),
+(15, '2024_04_08_084620_alter_contacts_table', 11);
 
 -- --------------------------------------------------------
 
@@ -167,12 +166,13 @@ CREATE TABLE `personal_access_tokens` (
 
 CREATE TABLE `students` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `password` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `f_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `m_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `f_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `m_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `b_group` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -182,16 +182,18 @@ CREATE TABLE `students` (
 -- Dumping data for table `students`
 --
 
-INSERT INTO `students` (`id`, `name`, `email`, `password`, `phone`, `f_name`, `m_name`, `b_group`, `created_at`, `updated_at`) VALUES
-(18, 'kkk', 'jee@gmail.com', '0021', '877878454454', 'mndf', ',maef', 'ab+', '2024-04-03 05:19:25', '2024-04-03 05:19:25'),
-(19, 'ppp', 'pk@gmail.com', '8754', '15649846132', ',mf', 'kla', 'a+', '2024-04-03 05:19:53', '2024-04-03 05:19:53'),
-(20, 'swami', 'sy@gmail.com', '5478', '32654822132164', 'fkjn', 'nerf', 'ab+', '2024-04-03 05:20:17', '2024-04-03 05:20:17'),
-(21, 'joiefj', 'ms@gmail.com', '2132', '785321321321', 'uty', 'kjhsf', 'ab+', '2024-04-03 05:20:43', '2024-04-03 05:20:43'),
-(22, 'Ankit Yadav', 'ankityadavdc@gmail.com', '5421', '09140088783', '.,mdsf', 'jkanfjk', 'ab-', '2024-04-03 05:21:19', '2024-04-03 05:21:19'),
-(23, 'Amit Yadav', 'dk@gmail.com', '4555', '9140088783', 'kldf', 'mlknef', 'ab+', '2024-04-03 05:21:54', '2024-04-03 05:21:54'),
-(24, 'berlin', 'bro@gmail.com', '1254', '8996613212311', 'krishna', 'k.efm', 'a+', '2024-04-03 05:22:49', '2024-04-03 05:22:49'),
-(25, 'kaku', 'yyyu@gmail.com', '3333', '89553213231', 'Ankit', 'dfbf', 'a+', '2024-04-03 08:40:27', '2024-04-03 09:01:00'),
-(26, 'kikia', 'king@gmail.com', '1114', '09140088783', 'lllaka', 'k.efm', 'ab+', '2024-04-04 05:30:24', '2024-04-04 05:30:24');
+INSERT INTO `students` (`id`, `name`, `email`, `password`, `phone`, `f_name`, `m_name`, `image`, `b_group`, `created_at`, `updated_at`) VALUES
+(18, 'kkk', 'jee@gmail.com', '0021', '877878454454', 'mndf', ',maef', NULL, 'ab+', '2024-04-03 05:19:25', '2024-04-03 05:19:25'),
+(19, 'ppp', 'pk@gmail.com', '8754', '15649846132', ',mf', 'kla', NULL, 'a+', '2024-04-03 05:19:53', '2024-04-03 05:19:53'),
+(20, 'swami', 'sy@gmail.com', '5478', '32654822132164', 'fkjn', 'nerf', NULL, 'ab+', '2024-04-03 05:20:17', '2024-04-03 05:20:17'),
+(21, 'joiefj', 'ms@gmail.com', '2132', '785321321321', 'uty', 'kjhsf', NULL, 'ab+', '2024-04-03 05:20:43', '2024-04-03 05:20:43'),
+(22, 'Ankit Yadav', 'ankityadavdc@gmail.com', '5421', '09140088783', '.,mdsf', 'jkanfjk', NULL, 'ab-', '2024-04-03 05:21:19', '2024-04-03 05:21:19'),
+(23, 'Amit Yadav', 'dk@gmail.com', '4555', '9140088783', 'kldf', 'mlknef', NULL, 'ab+', '2024-04-03 05:21:54', '2024-04-03 05:21:54'),
+(24, 'berlin', 'bro@gmail.com', '1254', '8996613212311', 'krishna', 'k.efm', NULL, 'a+', '2024-04-03 05:22:49', '2024-04-03 05:22:49'),
+(25, 'kaku', 'yyyu@gmail.com', '3333', '89553213231', 'Ankit', 'dfbf', NULL, 'a+', '2024-04-03 08:40:27', '2024-04-03 09:01:00'),
+(26, 'kikia', 'king@gmail.com', '1114', '09140088783', 'lllaka', 'k.efm', NULL, 'ab+', '2024-04-04 05:30:24', '2024-04-04 05:30:24'),
+(27, 'kad', 'kad@gmail.com', '00009', '89458945', 'kaka', 'radha', NULL, 'ab+', '2024-04-08 02:28:54', '2024-04-08 02:28:54'),
+(29, 'jj', 'jio@gmail.com', '0008', '09999879878', 'amit', 'mn', '1712563995.jpg', 'ab+', '2024-04-08 02:43:15', '2024-04-08 02:43:15');
 
 -- --------------------------------------------------------
 
@@ -280,7 +282,7 @@ ALTER TABLE `app_crud`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -292,7 +294,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -304,7 +306,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `users`

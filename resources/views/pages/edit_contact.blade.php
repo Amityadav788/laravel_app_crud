@@ -51,7 +51,7 @@
     <div class="form-group col-md-6">
       <label for="image">Image</label>
       <input type="file" class="form-control" id="image" placeholder="Upload image" name="image" value="{{$data->image}}">
-      <img class="img-circle" width="50" height="50" src="{{ ('/storage/images/'. $data->image)}}">
+      <img class="img-circle" width="50" height="50" src="{{ ('/storage/images/'. $data->image) }}">
       @error('image')
     <div class="alert alert-danger">{{ $message }}</div>
 @enderror
